@@ -6,7 +6,7 @@ $username = $url["b48d7c722bf68a"];
 $password = $url["ed0b19cb"];
 $db = substr($url["heroku_79f9ab8d2fe0569"], 1);
 
-$conn = new mysqli($server, $username, $password, $db);
+$dbc = new mysqli($server, $username, $password, $db);
 $active_group = 'default';
 $active_record = TRUE ;
 $db['default']['hostname'] = $server;
