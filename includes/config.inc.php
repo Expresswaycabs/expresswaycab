@@ -5,7 +5,7 @@ $live = false;
 $contact_email = 'expresswaycabs@gmail.com';
 
 /*define the constants*/
-define('BASE_URI','C:/xampp/htdocs/ExpresswayCabs.com/expresswaycabs');
+define('BASE_URI','https://github.com/Expresswaycabs/expresswaycab');
 define('BASE_URL','www.expresswaycab.com');
 define('MYSQL','mysql.inc.php');
 
