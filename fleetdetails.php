@@ -48,6 +48,13 @@ if($_POST['waiting_hr']!=""){
           $reg_errors['$waiting_hr'] = 'Enter waiting charges!';
 }
 
+/*check for route_id*/
+if($_POST['route_id']!=""){
+          $route_id = mysqli_real_escape_string($dbc,$_POST['route_id']);
+}else{
+          $reg_errors['$route_id'] = 'Enter operation route!';
+}
+
 if(empty($reg_errors)){
           
 		  $result = mysqli_query( $dbc , "SELECT car_no FROM car_detail WHERE car_no= '$car_no' LIMIT 0 , 30");
@@ -57,7 +64,7 @@ if(empty($reg_errors)){
 		  $rows = mysqli_num_rows($result);
 		  
 		  if($rows==0){
-		         $query = "INSERT INTO car_detail(sp_id,car_type,car_cap,car_no,available,price_km,waiting_hr,car_pool,returning)VALUES('$sp_id','$car_type','$car_cap','$car_no','yes','$price_km','$waiting_hr','$car_pool','yes')";
+		         $query = "INSERT INTO car_detail(sp_id,car_type,car_cap,seats_available,car_no,available,price_km,waiting_hr,car_pool,returning,route_id)VALUES('$sp_id','$car_type','$car_cap','$car_cap','$car_no','yes','$price_km','$waiting_hr','$car_pool','yes','$route_id')";
 		         $result = mysqli_query($dbc,$query);
 				 
 				 if(mysqli_affected_rows($dbc)==1){
@@ -198,6 +205,37 @@ if(empty($reg_errors)){
 	<input class="form-control" type="text" name="waiting_hr" value="<?php if(isset($_POST['waiting_hr']))echo htmlspecialchars($_POST['waiting_hr'])?>" autocomplete="off" placeholder="<?php if (array_key_exists('$waiting_hr', $reg_errors))echo $reg_errors['$waiting_hr'];?>">
 </div>
 </div><br>
+<div class="row">
+
+<div class="col-md-2">
+    <label for="route_id" class="control-label">Operation Route</label>
+</div>	
+
+<div class="col-md-2">	
+	<select class="form-control" name="route_id" placeholder="<?php if (array_key_exists('$route_id', $reg_errors))echo $reg_errors['$route_id'];?>">
+		<option <?php if (isset($_POST['route_id']) && $route_id==1) echo "checked";?> value="1">Bengaluru-Kochi</option>
+		<option <?php if (isset($_POST['route_id']) && $route_id==2) echo "checked";?> value="2">Bengaluru-Belagavi</option>
+		<option <?php if (isset($_POST['route_id']) && $route_id==3) echo "checked";?> value="3">Bengaluru-Chennai</option>
+		<option <?php if (isset($_POST['route_id']) && $route_id==4) echo "checked";?> value="4">Bengaluru-Mangalore</option>
+		<option <?php if (isset($_POST['route_id']) && $route_id==5) echo "checked";?> value="5">Bengaluru-Hyderabad</option>
+		<option <?php if (isset($_POST['route_id']) && $route_id==6) echo "checked";?> value="6">Bengaluru-Panaji</option>
+		<option <?php if (isset($_POST['route_id']) && $route_id==7) echo "checked";?> value="7">Bengaluru-Hampi</option>
+		<option <?php if (isset($_POST['route_id']) && $route_id==8) echo "checked";?> value="8">Bengaluru-Davangere</option>
+		<option <?php if (isset($_POST['route_id']) && $route_id==9) echo "checked";?> value="9">Bengaluru-Hubli</option>
+		<option <?php if (isset($_POST['route_id']) && $route_id==10) echo "checked";?> value="10">Bengaluru-Krishnagiri</option>
+		<option <?php if (isset($_POST['route_id']) && $route_id==11) echo "checked";?> value="11">Bengaluru-Vellore</option>
+		<option <?php if (isset($_POST['route_id']) && $route_id==12) echo "checked";?> value="12">Bengaluru-Chitradurga</option>
+		<option <?php if (isset($_POST['route_id']) && $route_id==13) echo "checked";?> value="13">Bengaluru-Tumakuru</option>
+		<option <?php if (isset($_POST['route_id']) && $route_id==14) echo "checked";?> value="14">Bengaluru-Hassan</option>
+		<option <?php if (isset($_POST['route_id']) && $route_id==16) echo "checked";?> value="15">Bengaluru-Belur</option>
+		<option <?php if (isset($_POST['route_id']) && $route_id==17) echo "checked";?> value="16">Bengaluru-Mysuru</option>
+		<option <?php if (isset($_POST['route_id']) && $route_id==18) echo "checked";?> value="17">Kochi-Belagavi</option>
+		<option <?php if (isset($_POST['route_id']) && $route_id==19) echo "checked";?> value="18">Kochi-Chennai</option>
+	</select>
+</div>
+
+</div><br>
+
                 <div class="row">
 				<div class="col-md-6"></div>
                 <div class="col-md-3">
