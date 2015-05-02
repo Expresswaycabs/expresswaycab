@@ -19,15 +19,17 @@ if(!empty($_POST['customer_pass'])){
 }
 
 if(empty($login_errors)){
-      $query = "SELECT customer_eid,customer_pass FROM customer_detail WHERE (customer_eid='$customer_eid' AND customer_pass='$customer_pass')";
+      $query = "SELECT customer_id,customer_name,customer_eid,customer_pass FROM customer_detail WHERE (customer_eid='$customer_eid' AND customer_pass='$customer_pass')";
 	  $result = mysqli_query($dbc,$query);
 	  if($result==FALSE) {
            die('Invalid query: ' . mysqli_error($dbc));
            }
 	  if(mysqli_num_rows($result)==1){
 	     $row = mysqli_fetch_array($result,MYSQLI_NUM);
-		 $_SESSION['customer_eid'] = $row[0];
-		 $_SESSION['customer_pass'] = $row[1];
+		 $_SESSION['customer_id'] = $row[0];
+		 $_SESSION['customer_name'] = $row[1];
+		 $_SESSION['customer_eid'] = $row[2];
+		 $_SESSION['customer_pass'] = $row[3];
 		 header('Location:getacab.php');
 		 session_register('customer_id');
 	  }else{
