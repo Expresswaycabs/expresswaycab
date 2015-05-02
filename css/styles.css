@@ -1,0 +1,215 @@
+.logo{
+    color:#6699cc;
+    text-shadow: 2px 2px black;	
+}
+.optionmenu{
+    border: 1px solid black;
+    background:url('needaride.jpg');
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    padding:15px;
+	height:300px;
+	color:white;
+	text-shadow: 2px 2px green;
+}
+.customermenu{
+    border: 1px solid chartreuse;
+	background:#ccff99;
+	padding:15px;
+	color:green;
+}
+#fbk{
+    width:200px;
+	height:200px;
+	border-radius:50%;
+	border: 5px solid green;
+}
+#tktx{
+    width:200px;
+	height:200px;
+	border-radius:50%;
+	border: 5px solid green;
+}
+#mgbk{
+    width:200px;
+	height:200px;
+	border-radius:50%;
+	border: 5px solid green;
+}
+.onlinefleetmanager{
+    border: 3px solid orange;
+	background:#ffffcc;
+	padding:15px;
+}
+.footer{
+	background:#99ccff;
+	padding:15px;
+	color:green;
+}
+#getcabbutton{
+    box-shadow: inset 0px 0px 6px #fff;
+   -webkit-box-shadow: inset 0px 0px 6px #fff;
+    border: 1px solid #5ea617;
+}
+#managebutton{
+    box-shadow: inset 0px 0px 6px #fff;
+   -webkit-box-shadow: inset 0px 0px 6px #fff;
+    border: 1px solid #5ea617;
+}
+
+.ofm{
+    color:#6699cc;
+    text-shadow: 2px 2px black;	
+}
+#txft{
+    width:150px;
+	height:150px;
+	border-radius:50%;
+	border: 7px solid blue;
+}
+#stf{
+    width:150px;
+	height:150px;
+	border-radius:50%;
+	border: 7px solid blue;
+}
+#mgact{
+    width:150px;
+	height:150px;
+	border-radius:50%;
+	border: 7px solid blue;
+}
+#trktx{
+    width:150px;
+	height:150px;
+	border-radius:50%;
+	border: 7px solid blue;
+}
+.ofmmenu{
+	background:#b0e0e6;
+	padding:15px;
+	color:blue;
+}
+#taxflt{
+    width:100px;
+	height:100px;
+	border-radius:50%;
+	border: 1px solid blue;
+}
+@media screen and (max-width:767px){
+	      #register,#city,#ccity,#pcode,#pin{
+		   text-align:center;
+		   position:relative;
+		   top:-100px;
+		   }
+		   .loginform{
+           border: 1px solid blue;
+		   -webkit-box-shadow: inset 0px 0px 6px #fff;
+	       background:#a8a8a8;
+		   border-top-left-radius: 1em;
+		   border-top-right-radius: 1em;
+		   border-bottom-left-radius: 1em;
+		   border-bottom-right-radius: 1em;	   
+          }	
+		  #cust_em,#cust_pwd{
+          height:45px;
+	      position:relative;
+		  left:50px;
+          }	
+          .searchcriteria{
+           border: 4px solid blue;
+	       background:#b0e0e6;
+	       padding:15px;
+	       color:blue;
+          }	
+          .directionpanel{
+            background:white;		
+			border: 4px solid blue;
+          }			
+	   }
+	   @media screen and (min-width:768px){
+	      #register{
+		  text-align:center;
+		  }
+	   }
+	   @media screen and (min-width:992px){
+	      #register{
+		  text-align:center;
+		  align-content:center;
+		  position:relative;
+		  left:-140px;
+		  }
+		  .loginform{
+           width:450px;
+	       height:460px;
+           border: 1px solid blue;
+		   -webkit-box-shadow: inset 0px 0px 6px #fff;
+	       background:#a8a8a8;
+		   border-top-left-radius: 1em;
+		   border-top-right-radius: 1em;
+		   border-bottom-left-radius: 1em;
+		   border-bottom-right-radius: 1em;
+	       position:relative;
+           left:430px;		   
+          }	
+		  #cust_em,#cust_pwd{
+          height:45px;
+	      position:relative;
+		  left:80px;
+          }
+          #rgstr{
+		  position:relative;
+		  left:20px;
+		  }	
+		  .searchcriteria{
+           border: 4px solid blue;
+	       background:#b0e0e6;
+	       padding:15px;
+	       color:blue;
+	       width:800px;
+          }
+          .directionpanel{
+            background:white;
+			position:relative;
+			left:805px;
+			top:-355px;
+			border: 4px solid blue;
+			width:535px;
+          }		  
+	   }
+	   @media projection and (min-width:1200px){
+	      #register{
+		  text-align:center;
+		  align-content:center;
+		  position:relative;
+		  left:-140px;
+		  }
+		  .loginform{
+           width:450px;
+	       height:460px;
+           border: 1px solid blue;
+		   -webkit-box-shadow: inset 0px 0px 6px #fff;
+	       background:#a8a8a8;
+		   border-top-left-radius: 1em;
+		   border-top-right-radius: 1em;
+		   border-bottom-left-radius: 1em;
+		   border-bottom-right-radius: 1em;
+	       position:relative;
+           left:1000px;		   
+          }	
+		   .searchcriteria{
+           border: 4px solid blue;
+	       background:#b0e0e6;
+	       padding:15px;
+	       color:blue;
+	       width:800px;
+          }
+          .directionpanel{
+            background:white;
+			position:relative;
+			left:805px;
+			top:-355px;
+			border:4px solid blue;
+			width:535px;
+          }		  
+	   }
