@@ -82,7 +82,7 @@ if($_POST['sp_add']!=""){
 }
 
 /*check for city*/
-if(preg_match('/^[A-Z\'.-]{2,40}$/i',$_POST['sp_city'])){
+if($_POST['sp_city']!=""){
           $sp_city = mysqli_real_escape_string($dbc,$_POST['sp_city']);
 }else{
           $reg_errors['$sp_city'] = 'Enter your city!';
@@ -198,7 +198,25 @@ if(empty($reg_errors)){
                 <br><br><br><br><br><br><br>
 				<label for="city" class="col-sm-3 col-md-3 col-lg-3 control-label" id="city" style="text-align:right">City</label>
 				   <div class="col-sm-3 col-md-3 col-lg-3">
-					   <input class="form-control" id="ccity" type="text" name="sp_city" value="<?php if(isset($_POST['sp_city']))echo htmlspecialchars($_POST['sp_city'])?>" autocomplete="off">
+					  <select class="form-control" id="sp_city" name="sp_city">
+  <option <?php if (isset($_POST['sp_city']) && $sp_city=="Bengaluru, Karnataka") echo "checked";?>value="Bengaluru, Karnataka">Bengaluru</option>
+  <option <?php if (isset($_POST['sp_city']) && $sp_city=="Kochi, Kerala") echo "checked";?>value="Kochi, Kerala">Kochi, Kerala</option>
+  <option <?php if (isset($_POST['sp_city']) && $sp_city=="Belagavi, Karnataka") echo "checked";?>value="Belagavi, Karnataka">Belagavi, Karnataka</option>
+  <option <?php if (isset($_POST['sp_city']) && $sp_city=="Chennai, Tamil Nadu") echo "checked";?>value="Chennai, Tamil Nadu">Chennai, Tamil Nadu</option>
+  <option <?php if (isset($_POST['sp_city']) && $sp_city=="Mangalore, Karnataka") echo "checked";?>value="Mangalore, Karnataka">Mangalore, Karnataka</option>
+  <option <?php if (isset($_POST['sp_city']) && $sp_city=="Hyderabad, Telangana") echo "checked";?>value="Hyderabad, Telangana">Hyderabad, Telangana</option>
+  <option <?php if (isset($_POST['sp_city']) && $sp_city=="Panaji, Goa") echo "checked";?>value="Panaji, Goa">Panaji, Goa</option>
+  <option <?php if (isset($_POST['sp_city']) && $sp_city=="Hampi, Karnataka") echo "checked";?>value="Hampi, Karnataka 583239">Hampi, Karnataka</option>
+  <option <?php if (isset($_POST['sp_city']) && $sp_city=="Davangere, Karnataka") echo "checked";?>value="Davangere, Karnataka">Davangere, Karnataka</option>
+  <option <?php if (isset($_POST['sp_city']) && $sp_city=="Hubli, Karnataka") echo "checked";?>value="Hubli, Karnataka">Hubli, Karnataka</option>
+  <option <?php if (isset($_POST['sp_city']) && $sp_city=="Krishnagiri, Tamil Nadu") echo "checked";?>value="Krishnagiri, Tamil Nadu">Krishnagiri, Tamil Nadu</option>
+  <option <?php if (isset($_POST['sp_city']) && $sp_city=="Vellore, Tamil Nadu") echo "checked";?>value="Vellore, Tamil Nadu">Vellore, Tamil Nadu</option>
+  <option <?php if (isset($_POST['sp_city']) && $sp_city=="Chitradurga, Karnataka") echo "checked";?>value="Chitradurga, Karnataka">Chitradurga, Karnataka</option>
+  <option <?php if (isset($_POST['sp_city']) && $sp_city=="Tumakuru, Karnataka") echo "checked";?>value="Tumakuru, Karnataka">Tumakuru, Karnataka</option>
+  <option <?php if (isset($_POST['sp_city']) && $sp_city=="Hassan, Karnataka") echo "checked";?>value="Hassan, Karnataka">Hassan, Karnataka</option>
+  <option <?php if (isset($_POST['sp_city']) && $sp_city=="Belur, Karnataka") echo "checked";?>value="Belur, Karnataka">Belur, Karnataka</option>
+  <option <?php if (isset($_POST['sp_city']) && $sp_city=="Mysuru, Karnataka") echo "checked";?>value="Mysuru, Karnataka">Mysuru, Karnataka</option>
+</select>
 				   </div>
                 <span class="error"><?php if (array_key_exists('$sp_city', $reg_errors))echo $reg_errors['$sp_city'];?></span>
                 <br><br>
