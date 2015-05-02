@@ -4,7 +4,7 @@ $url = parse_url(getenv("CLEARDB_DATABASE_URL"));
 $server = $url["us-cdbr-iron-east-02.cleardb.net"];
 $username = $url["b48d7c722bf68a"];
 $password = $url["ed0b19cb"];
-$db = substr($url["https://www.cleardb.com/database/details?id=052C98C40886DABE7E6C99254C9D9E0F"], 1);
+$db = substr($url["heroku_79f9ab8d2fe0569"], 1);
 
 $conn = new mysqli($server, $username, $password, $db);
 $active_group = 'default';
