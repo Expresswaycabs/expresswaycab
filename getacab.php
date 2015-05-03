@@ -479,7 +479,7 @@ if(empty($reg_errors)){
 </div>	
 
 <div class="col-md-3">
-	<input class="form-control" id="datepicker" type="date" name="date_arr" value="<?php if(isset($_POST['date_arr']))echo htmlspecialchars($_POST['date_arr'])?>" autocomplete="off">
+	<input class="form-control" id="datepicker" type="text" name="date_arr" value="<?php if(isset($_POST['date_arr']))echo htmlspecialchars($_POST['date_arr'])?>" autocomplete="off">
 </div>
 
 <div class="col-md-3">
@@ -501,7 +501,7 @@ if(empty($reg_errors)){
 </div>	
 
 <div class="col-md-3">
-	<input class="form-control" type="date" id="datepicker" name="date_ret"  value="<?php if(isset($_POST['date_ret']))echo htmlspecialchars($_POST['date_ret'])?>" autocomplete="off" disabled>
+	<input class="form-control" type="text" id="datepicker" name="date_ret"  value="<?php if(isset($_POST['date_ret']))echo htmlspecialchars($_POST['date_ret'])?>" autocomplete="off" disabled>
 </div>
 
 <div class="col-md-3">
