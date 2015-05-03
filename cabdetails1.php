@@ -38,7 +38,7 @@ require(MYSQL);
                 </thead>'; 
 		  while($row = mysqli_fetch_array($result)){
 		  echo "<tbody>"; 
-		  echo "<form action=booking_page.php method=POST>";
+		  echo "<form action=booking_detail.php method=POST>";
 	      echo "<tr>";
 		  echo "<td>" . "<input type=text name=sp_name value=".$row['sp_name']." size=20 </td>";
 		  echo "<td>" . "<input type=text name=car_type value=".$row['car_type']." size=9 </td>";
