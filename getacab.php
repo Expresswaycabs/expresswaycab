@@ -15,7 +15,7 @@ require(MYSQL);?>
 	 <link rel="stylesheet" href="css/pickaday.css" type="text/css">
 	 <link rel="stylesheet" href="css/pickaday_theme.css" type="text/css">
 	 <link rel="stylesheet" href="css/pickaday_site.css" type="text/css">
-	 <script src="pickaday.js" type="text/javascript"></script>
+	 <script src="js/pickaday.js" type="text/javascript"></script>
 	 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
      <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
 	 <script src="https://maps.googleapis.com/maps/api/js?v=3.exp&signed_in=true&language=hi"></script>
@@ -47,7 +47,7 @@ require(MYSQL);?>
 		  }
 	   }
     </style>
-    <script src="pikaday.js"></script>
+    <script src="js/pikaday.js"></script>
 <script>
     var picker = new pikaday({
         field: document.getElementById('datepicker'),
