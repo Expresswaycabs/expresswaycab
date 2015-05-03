@@ -14,12 +14,6 @@ require(MYSQL);?>
 	 <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
 	 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
      <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
-  <link rel="stylesheet" href="/resources/demos/style.css">
-  <script>
-  $(function() {
-    $( "#datepicker" ).datepicker();
-  });
-  </script>
 	 <script src="https://maps.googleapis.com/maps/api/js?v=3.exp&signed_in=true&language=hi"></script>
     <style>
       html, body, #map-canvas {
@@ -491,7 +485,7 @@ if(empty($reg_errors)){
 </div>	
 
 <div class="col-md-3">
-	<input class="form-control" type="date" name="date_ret"  value="<?php if(isset($_POST['date_ret']))echo htmlspecialchars($_POST['date_ret'])?>" autocomplete="off" >
+	<input class="form-control" type="date" name="date_ret" id="date_ret" value="<?php if(isset($_POST['date_ret']))echo htmlspecialchars($_POST['date_ret'])?>" autocomplete="off" disabled>
 </div>
 
 <div class="col-md-3">
@@ -499,7 +493,7 @@ if(empty($reg_errors)){
 </div>
 
 <div class="col-md-3">	
-	<input class="form-control" type="time" name="time_ret" id="time_ret" value="<?php if(isset($_POST['time_ret']))echo htmlspecialchars($_POST['time_ret'])?>" autocomplete="off">
+	<input class="form-control" type="time" name="time_ret" id="time_ret" value="<?php if(isset($_POST['time_ret']))echo htmlspecialchars($_POST['time_ret'])?>" autocomplete="off" disabled>
 </div>
 
 </div>
