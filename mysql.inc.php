@@ -1,10 +1,10 @@
 <?php
 $url = parse_url(getenv("CLEARDB_DATABASE_URL"));
 
-$server = $url["us-cdbr-iron-east-02.cleardb.net"];
-$username = $url["b48d7c722bf68a"];
-$password = $url["ed0b19cb"];
-$db = substr($url["heroku_79f9ab8d2fe0569"], 1);
+$server = $url["host"];
+$username = $url["user"];
+$password = $url["pass"];
+$db = substr($url["path"], 1);
 
 $dbc = new mysqli($server, $username, $password, $db);
 $active_group = 'default';
