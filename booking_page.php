@@ -5,18 +5,6 @@ require(MYSQL);
 ?>
 <div class="container-fluid" style="background:#ccffff;">
 <?php
-        $returning = $_SESSION['returning'];
-        $carpooling = $_SESSION['carpooling'];		
-        $from_city = $_SESSION['from_city'];
-        $to_city = $_SESSION['to_city'];
-        $no_of_pass = $_SESSION['no_of_pass'];
-        $date_arr = $_SESSION['date_arr'];
-		$time_arr = $_SESSION['time_arr'];
-		$date_ret = $_SESSION['date_ret'];
-		$time_ret = $_SESSION['time_ret'];
-		$route_id = $_SESSION['route_id'];
-		$retRoute_id = $_SESSION['retRoute_id'];
-		$status_no = $_SESSION['status_no'];
 		if(isset($_POST['Book'])){
 			$car_no = $_POST['car_no'];
         $_SESSION['car_no'] = $car_no; }
