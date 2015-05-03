@@ -4,9 +4,6 @@ include('./includes/header2.html');
 require(MYSQL);
 $booking_no = $_SESSION['booking_no'];
 $car_no = $_SESSION['car_no'];
-$rupPrice = 20; 
-$calc = $rupPrice / $price;
-$taxiFare = round($calc, 4);
 require("yourEmail.php");
 $emailTitle = "New Booking Detail"; 
 $emailTitle_Customer = "Taxi Booking Detail"; //EMAIL TITLE CUSTOMER WILL SEE
@@ -88,7 +85,7 @@ $taxiNo = $row[0];
         Time of Departure : $time_of_dept <br>
                 
 EOD;
-        $customerCopy = mail($customer_eid, $emailTitle_Customer, $custEmail, $headers);
+        mail($customer_eid, $emailTitle_Customer, $custEmail, $headers);
 
 ?>
 
