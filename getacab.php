@@ -12,10 +12,6 @@ require(MYSQL);?>
 	 <link href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css" rel="stylesheet">
 	 <link rel="stylesheet" type="text/css" href="css/styles.css">
 	 <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
-	 <link rel="stylesheet" href="css/pickaday.css" type="text/css">
-	 <link rel="stylesheet" href="css/pickaday_theme.css" type="text/css">
-	 <link rel="stylesheet" href="css/pickaday_site.css" type="text/css">
-	 <script src="js/pickaday.js" type="text/javascript"></script>
 	 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
      <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
 	 <script src="https://maps.googleapis.com/maps/api/js?v=3.exp&signed_in=true&language=hi"></script>
@@ -47,18 +43,6 @@ require(MYSQL);?>
 		  }
 	   }
     </style>
-    <script src="js/pickaday.js"></script>
-<script>
-    var picker = new pikaday({
-        field: document.getElementById('datepicker'),
-        minDate : new Date('2015-01-01'),
-        maxDate : new Date('2020-12-31'),
-        yearRange : [2015 , 2020],
-        numberOfmonths : 1 ,
-        theme : 'dark-theme' ,
-        }
-    });
-</script>
     <script src="https://maps.googleapis.com/maps/api/js?v=3.exp&signed_in=true"></script>
     <script>
 var map;
@@ -479,7 +463,7 @@ if(empty($reg_errors)){
 </div>	
 
 <div class="col-md-3">
-	<input class="form-control" id="datepicker" type="text" name="date_arr" value="<?php if(isset($_POST['date_arr']))echo htmlspecialchars($_POST['date_arr'])?>" autocomplete="off">
+	<input class="form-control" type="date" name="date_arr" value="<?php if(isset($_POST['date_arr']))echo htmlspecialchars($_POST['date_arr'])?>" autocomplete="off">
 </div>
 
 <div class="col-md-3">
@@ -501,7 +485,7 @@ if(empty($reg_errors)){
 </div>	
 
 <div class="col-md-3">
-	<input class="form-control" type="text" id="datepicker" name="date_ret"  value="<?php if(isset($_POST['date_ret']))echo htmlspecialchars($_POST['date_ret'])?>" autocomplete="off" disabled>
+	<input class="form-control" type="date" name="date_ret"  value="<?php if(isset($_POST['date_ret']))echo htmlspecialchars($_POST['date_ret'])?>" autocomplete="off" >
 </div>
 
 <div class="col-md-3">
@@ -509,7 +493,7 @@ if(empty($reg_errors)){
 </div>
 
 <div class="col-md-3">	
-	<input class="form-control" type="time" name="time_ret" id="time_ret" value="<?php if(isset($_POST['time_ret']))echo htmlspecialchars($_POST['time_ret'])?>" autocomplete="off" disabled>
+	<input class="form-control" type="time" name="time_ret" id="time_ret" value="<?php if(isset($_POST['time_ret']))echo htmlspecialchars($_POST['time_ret'])?>" autocomplete="off">
 </div>
 
 </div>
