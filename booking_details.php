@@ -85,7 +85,7 @@ if(empty($book_errors)){
            }
 		}
 		
-		header("Location:booking_detail.php");
+		header("Location:booking_summary.php");
 	  }
 }	
 }		
