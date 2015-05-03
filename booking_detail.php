@@ -5,10 +5,6 @@ require(MYSQL);
 $reg_errors = array();
 $booking_no = $_SESSION['booking_no'];
 $car_no = $_SESSION['car_no'];
-
-$url = "https://btc-e.com/api/2/btc_usd/ticker";
-$json = json_decode(file_get_contents($url), true);
-$price = $json["ticker"]["last"];
 $rupPrice = 20; 
 $calc = $rupPrice / $price;
 $taxiFare = round($calc, 4);
@@ -25,12 +21,6 @@ $Result = mysqli_query( $dbc , "SELECT car_no FROM booking_detail WHERE car_no='
 $row = mysqli_fetch_array($Result);
 $taxiNo = $row[0];
 
-//CREATE UNIQUE BITCOIN ADDRESS FOR PAYMENT
-require("bitcoinpayment_addr.php");
-        $new_address = "https://blockchain.info/merchant/$id/new_address?password=$pw";
- 
-        $json_new_addr = json_decode(file_get_contents($new_address), true);
-        $display_address = $json_new_addr['address'];
 		$result = mysqli_query($dbc,"SELECT bk.customer_eid,bk.customer_mno,sc.from_city,sc.to_city,bk.date_of_dept,bk.time_of_dept,bk.car_no FROM booking_detail as bk JOIN search_criteria as sc on bk.route_id=sc.route_id AND bk.customer_eid=sc.customer_eid WHERE bk.booking_no='$booking_no'");
           if($result==FALSE) {
            die('Invalid query: ' . mysqli_error($dbc));
