@@ -49,11 +49,13 @@ require(MYSQL);?>
     </style>
     <script src="pikaday.js"></script>
 <script>
-    var picker = new Pikaday({
+    var picker = new pikaday({
         field: document.getElementById('datepicker'),
-        format: 'D MMM YYYY',
-        onSelect: function() {
-            console.log(this.getMoment().format('Do MMMM YYYY'));
+        minDate : new Date('2015-01-01'),
+        maxDate : new Date('2020-12-31'),
+        yearRange : [2015 , 2020],
+        numberOfmonths : 1 ,
+        theme : 'dark-theme' ,
         }
     });
 </script>
