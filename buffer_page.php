@@ -3,6 +3,21 @@ require('./includes/config.inc.php');
 include('./includes/header.html');
 require(MYSQL);
 $reg_errors = array();
+?>
+<?php
+$returning = $_SESSION['returning'];
+-        $carpooling = $_SESSION['carpooling'];		
+-        $from_city = $_SESSION['from_city'];
+-        $to_city = $_SESSION['to_city'];
+-        $no_of_pass = $_SESSION['no_of_pass'];
+-        $date_arr = $_SESSION['date_arr'];
+-		$time_arr = $_SESSION['time_arr'];
+-		$date_ret = $_SESSION['date_ret'];
+-		$time_ret = $_SESSION['time_ret'];
+-		$route_id = $_SESSION['route_id'];
+-		$retRoute_id = $_SESSION['retRoute_id'];
+-		$status_no = $_SESSION['status_no'];
+
 $booking_no = $_SESSION['booking_no'];
 if($_SERVER['REQUEST_METHOD']=='POST')
 {
