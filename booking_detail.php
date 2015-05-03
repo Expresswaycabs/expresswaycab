@@ -2,7 +2,6 @@
 require('./includes/config.inc.php');
 include('./includes/header2.html');
 require(MYSQL);
-$reg_errors = array();
 $booking_no = $_SESSION['booking_no'];
 $car_no = $_SESSION['car_no'];
 $rupPrice = 20; 
