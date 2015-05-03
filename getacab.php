@@ -47,7 +47,7 @@ require(MYSQL);?>
 		  }
 	   }
     </style>
-    <script src="js/pikaday.js"></script>
+    <script src="js/pickaday.js"></script>
 <script>
     var picker = new pikaday({
         field: document.getElementById('datepicker'),
