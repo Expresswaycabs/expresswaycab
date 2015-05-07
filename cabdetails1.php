@@ -30,7 +30,6 @@ require(MYSQL);
 		          <th>Taxi Company</th>
 		          <th>Taxi Model</th>
 		          <th>No of Seats</th>
-				  <th>Car Number</th>
 				  <th>Price/KM</th>
 		          <th>Waiting Charges/HR</th>
 				  <th></th>
@@ -43,8 +42,7 @@ require(MYSQL);
 	      echo "<tr>";
 		  echo "<td>" . "<input type=text name=sp_name value=".$row['sp_name']." size=20 </td>";
 		  echo "<td>" . "<input type=text name=car_type value=".$row['car_type']." size=9 </td>";
-		  echo "<td>" . "<input type=text name=seats_available value=".$row['seats_available']." size=9 </td>";
-		  echo "<td>" . "<input type=text name=car_no value=".$row['car_no']." size=9 </td>";
+		  echo "<td>" . "<input type=text name=car_cap value=".$row['car_cap']." size=9 </td>";
 	      echo "<td>" . "<input type=text name=price_km value=".$row['price_km']." size=9 </td>";
 		  echo "<td>" . "<input type=text name=waiting_hr value=".$row['waiting_hr']." size=12 </td>";
 		  echo "<td>" . "<input type=hidden name=hidden value=".$row['car_no']." </td>";
