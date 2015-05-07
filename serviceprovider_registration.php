@@ -186,7 +186,7 @@ if(empty($reg_errors)){
                 <br><br>
 				<label for="aadhar" class="col-sm-3 col-md-3 col-lg-3 control-label" style="text-align:right">Owner's Aadhar Number</label>
 				   <div class="col-sm-3 col-md-3 col-lg-3">
-					   <input class="form-control" type="text" data-toggle="tooltip" data-placement="top" title="Enter your 12-digit aadhar number!" name="sp_aadhar" value="<?php if(isset($_POST['sp_aadhar']))echo htmlspecialchars($_POST['sp_aadhar'])?>" autocomplete="off">
+					   <input class="form-control" type="text" data-toggle="tooltip" data-placement="right" title="Enter your 12-digit aadhar number!" name="sp_aadhar" value="<?php if(isset($_POST['sp_aadhar']))echo htmlspecialchars($_POST['sp_aadhar'])?>" autocomplete="off">
 				   </div>
                 <span class="error"><?php if (array_key_exists('$sp_aadhar', $reg_errors))echo $reg_errors['$sp_aadhar'];?></span>
                 <br><br>
