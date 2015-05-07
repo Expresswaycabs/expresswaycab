@@ -100,7 +100,7 @@
 	border: 1px solid blue;
 }
 @media screen and (max-width:767px){
-	      #register,#city,#ccity,#pcode,#pin{
+	      #register,#register1,#city,#ccity,#pcode,#pin{
 		   text-align:center;
 		   position:relative;
 		   top:-100px;
