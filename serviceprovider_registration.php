@@ -222,7 +222,7 @@ if(empty($reg_errors)){
                 <br><br>
 				<div class="row">
                 <div class="col-md-12">
-                <input class="btn btn-primary" type="submit" id="register" name="register" value="Register"/>
+                <input class="btn btn-primary" type="submit" id="register1" name="register" value="Register"/>
                 </div>
                 </div><br>
 </form>
