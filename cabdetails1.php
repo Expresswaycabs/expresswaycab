@@ -22,7 +22,8 @@ require(MYSQL);
 		  if($result==FALSE) {
            die('Invalid query: ' . mysqli_error($dbc));
            }
-		  echo '<table class="table table-hover">
+		  echo '<div class="table-responsive">
+		  <table class="table table-hover">
                 <caption style="color:black;text-align:center;">Book Your Car</caption>
                 <thead>
 	            <tr>
@@ -53,6 +54,7 @@ require(MYSQL);
           echo "</tbody>";
 		  }
          echo '</table>';
+         echo '</div>';
 		 $_SESSION['car_no'] = $row['car_no'];
 ?>
 </div>
