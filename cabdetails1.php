@@ -18,7 +18,7 @@ require(MYSQL);
 		$retRoute_id = $_SESSION['retRoute_id'];
 		$status_no = $_SESSION['status_no'];
 
- $result = mysqli_query( $dbc , "SELECT sp.sp_name,cd.car_type,cd.seats_available,cd.car_no,cd.price_km,cd.waiting_hr FROM service_provider AS sp JOIN car_detail AS cd ON sp.sp_id = cd.sp_id WHERE (sp.sp_city='$from_city' OR cd.route_id='$route_id' OR cd.route_id='$retRoute_id') AND cd.car_cap>='$no_of_pass' AND cd.available='yes' AND cd.car_pool='yes'");
+ $result = mysqli_query( $dbc , "SELECT sp.sp_name,cd.car_type,cd.car_cap,cd.car_no,cd.price_km,cd.waiting_hr FROM service_provider AS sp JOIN car_detail AS cd ON sp.sp_id = cd.sp_id WHERE (sp.sp_city='$from_city' OR cd.route_id='$route_id' OR cd.route_id='$retRoute_id') AND cd.car_cap>='$no_of_pass' AND cd.available='yes' AND cd.car_pool='yes'");
 		  if($result==FALSE) {
            die('Invalid query: ' . mysqli_error($dbc));
            }
