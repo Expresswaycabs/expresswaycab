@@ -108,7 +108,8 @@ if(empty($reg_errors)){
 		  if($result==FALSE) {
            die('Invalid query: ' . mysqli_error($dbc));
            }
-		  echo '<table class="table table-hover">
+		  echo '<div class="table-responsive">
+		  <table class="table table-hover">
                 <caption style="color:black;text-align:center;">Car Details</caption>
                 <thead>
 	            <tr>
@@ -141,6 +142,7 @@ if(empty($reg_errors)){
           echo "</tbody>";
 		  }
          echo '</table>';
+         echo '</div>';
 ?>
 </div>
 <!--Database display ends-->
