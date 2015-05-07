@@ -107,8 +107,12 @@
 		   }
 	      #sp_city{
 	      	position:relative;
-	      	top:-30px;
-	      }	   
+	      	top:-40px;
+	      }	
+	      #register{
+	      	position:relative;
+	      	top:-20px;
+	      }
 		   .loginform{
                    border: 1px solid blue;
 		   -webkit-box-shadow: inset 0px 0px 6px #fff;
