@@ -144,13 +144,13 @@ if(empty($reg_errors)){
                 <br><br>
 				<label for="password" class="col-sm-3 col-md-3 col-lg-3 control-label" style="text-align:right">Password</label>
 				   <div class="col-sm-3 col-md-3 col-lg-3">
-					   <input class="form-control" type="password" data-toggle="tooltip" data-placement="top" title="Enter only alphanumeric values!" name="sp_pass" value="<?php if(isset($_POST['sp_pass']))echo htmlspecialchars($_POST['sp_pass'])?>" autocomplete="off">
+					   <input class="form-control" type="password" data-toggle="tooltip" data-placement="right" title="Enter only alphanumeric values!" name="sp_pass" value="<?php if(isset($_POST['sp_pass']))echo htmlspecialchars($_POST['sp_pass'])?>" autocomplete="off">
 				   </div>
                 <span class="error"><?php if (array_key_exists('$sp_pass', $reg_errors))echo $reg_errors['$sp_pass'];?></span>
                 <br><br>
 				<label for="confirmpassword" class="col-sm-3 col-md-3 col-lg-3 control-label" style="text-align:right">Confirm Password</label>
 				   <div class="col-sm-3 col-md-3 col-lg-3">
-					   <input class="form-control" type="password" data-toggle="tooltip" data-placement="top" title="Enter only alphanumeric values!" name="sp_pass1" value="<?php if(isset($_POST['sp_pass1']))echo htmlspecialchars($_POST['sp_pass1'])?>" autocomplete="off">
+					   <input class="form-control" type="password" data-toggle="tooltip" data-placement="right" title="Enter only alphanumeric values!" name="sp_pass1" value="<?php if(isset($_POST['sp_pass1']))echo htmlspecialchars($_POST['sp_pass1'])?>" autocomplete="off">
 				   </div>
                 <span class="error"<?php if (array_key_exists('$sp_pass1', $reg_errors))echo $reg_errors['$sp_pass1'];?>></span>
                 <br><br>
@@ -162,7 +162,7 @@ if(empty($reg_errors)){
                 <br><br>
 				<label for="mobile" class="col-sm-3 col-md-3 col-lg-3 control-label" style="text-align:right">Mobile Number</label>
 				   <div class="col-sm-3 col-md-3 col-lg-3">
-					   <input class="form-control" type="text" name="sp_mno" value="<?php if(isset($_POST['sp_mno']))echo htmlspecialchars($_POST['sp_mno'])?>" autocomplete="off">
+					   <input class="form-control" type="text" data-toggle="tooltip" data-placement="right" title="Enter your 10 digit mobile number!" name="sp_mno" value="<?php if(isset($_POST['sp_mno']))echo htmlspecialchars($_POST['sp_mno'])?>" autocomplete="off">
 				   </div>
                 <span class="error"><?php if (array_key_exists('$sp_mno', $reg_errors))echo $reg_errors['$sp_mno'];?></span>
                 <br><br>
@@ -186,11 +186,11 @@ if(empty($reg_errors)){
                 <br><br>
 				<label for="aadhar" class="col-sm-3 col-md-3 col-lg-3 control-label" style="text-align:right">Owner's Aadhar Number</label>
 				   <div class="col-sm-3 col-md-3 col-lg-3">
-					   <input class="form-control" type="text" name="sp_aadhar" value="<?php if(isset($_POST['sp_aadhar']))echo htmlspecialchars($_POST['sp_aadhar'])?>" autocomplete="off">
+					   <input class="form-control" type="text" data-toggle="tooltip" data-placement="top" title="Enter your 12-digit aadhar number!" name="sp_aadhar" value="<?php if(isset($_POST['sp_aadhar']))echo htmlspecialchars($_POST['sp_aadhar'])?>" autocomplete="off">
 				   </div>
                 <span class="error"><?php if (array_key_exists('$sp_aadhar', $reg_errors))echo $reg_errors['$sp_aadhar'];?></span>
                 <br><br>
-				<label for="address" class="col-sm-3 col-md-3 col-lg-3 control-label" style="text-align:right">Address</label>
+				<label for="address" class="col-sm-3 col-md-3 col-lg-3 control-label" style="text-align:right">Office Address</label>
 				   <div class="col-sm-3 col-md-3 col-lg-3">
 					   <textarea rows="6" cols="33" name="sp_add" value="<?php if(isset($_POST['sp_add']))echo htmlspecialchars($_POST['sp_add'])?>" autocomplete="off"></textarea>
 				   </div>
