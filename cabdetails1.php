@@ -53,6 +53,6 @@ require(MYSQL);
 		  }
          echo '</table>';
          echo '</div>';
-		 $_SESSION['car_no'] = $row['car_no'];
+		 $_SESSION['car_no'] = $row['hidden'];
 ?>
 </div>
