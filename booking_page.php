@@ -19,6 +19,7 @@ require(MYSQL);
 		$status_no = $_SESSION['status_no'];
 		if(isset($_POST['Book'])){
 			$car_no = $_POST['hidden'];
+			$seat_available = $_POST['car_cap'];
         $_SESSION['car_no'] = $car_no; }
         if($status_no==2)
 		{ 
@@ -30,10 +31,10 @@ require(MYSQL);
 		}	
 		else if($status_no==4){
 		 if(isset($_POST['Book'])){	
-			while($_POST['seats_available']>=$no_of_pass)
+			while($seats_available>=$no_of_pass)
 			{
-				$_POST['seats_available'] = $_POST['seats_available'] - $no_of_pass;
-				$updateQuery = " UPDATE car_detail SET seats_available='$_POST[seats_available]' WHERE car_no='$_POST[hidden]' ";
+				$seats_available = $seats_available - $no_of_pass;
+				$updateQuery = " UPDATE car_detail SET seats_available='$seats_available' WHERE car_no='$_POST[hidden]' ";
 				$result=mysqli_query($dbc,$updateQuery);
 				if($result==FALSE) {
                     die('Invalid query: ' . mysqli_error($dbc));
