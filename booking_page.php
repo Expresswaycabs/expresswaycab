@@ -1,6 +1,6 @@
 <?php
 require('./includes/config.inc.php');
-include('./includes/header.html');
+include('./includes/header2.html');
 require(MYSQL);
 ?>
 <div class="container-fluid" style="background:#ccffff;">
@@ -18,7 +18,7 @@ require(MYSQL);
 		$retRoute_id = $_SESSION['retRoute_id'];
 		$status_no = $_SESSION['status_no'];
 		if(isset($_POST['Book'])){
-			$car_no = $_POST['car_no'];
+			$car_no = $_POST['hidden'];
         $_SESSION['car_no'] = $car_no; }
         if($status_no==2)
 		{ 
