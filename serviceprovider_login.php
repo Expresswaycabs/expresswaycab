@@ -30,7 +30,7 @@ if(empty($login_errors)){
 		 $_SESSION['sp_pass'] = $row[2];
 		 $_SESSION['sp_ownname'] = $row[3];
 		 header('Location:fleetmanager.php');
-		 session_register('sp_id');
+		 
 	  }else{
          $login_errors['sp_eid'] = 'Email and Password do not match!';
       }	
