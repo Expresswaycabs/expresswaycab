@@ -55,7 +55,7 @@ require(MYSQL);
 	   taxis and staff details with the easy-to-use database.<br>Not only this, your company is also ranked on the basis of the customer feedback provided to ExpresswayCabs.</p>
   </div>
   <div class="col-md-4">
-    <img src="images/owner.jpg" class="img-responsive center-block" alt="no img">
+    <img src="images/owner.jpg" id="owner" class="img-responsive center-block" alt="no img">
   </div>
   <div class="col-md-4">
     <p>So what are you waiting for?!!<br>Register yourself and experience a new way of handling your business.</p>
