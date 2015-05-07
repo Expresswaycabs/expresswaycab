@@ -149,13 +149,13 @@ if(empty($reg_errors)){
                 <br><br>
 				<label for="password" class="col-sm-3 col-md-3 col-lg-3 control-label" style="text-align:right">Password</label>
 				   <div class="col-sm-3 col-md-3 col-lg-3">
-					   <input class="form-control" type="password" name="customer_pass" value="<?php if(isset($_POST['customer_pass']))echo htmlspecialchars($_POST['customer_pass'])?>" autocomplete="off">
+					   <input class="form-control" type="password" data-toggle="tooltip" data-placement="right" title="Enter only alphanumeric values!" name="customer_pass" value="<?php if(isset($_POST['customer_pass']))echo htmlspecialchars($_POST['customer_pass'])?>" autocomplete="off">
 				   </div>
                 <span class="error"><?php if (array_key_exists('$customer_pass', $reg_errors))echo $reg_errors['$customer_pass']?></span>
                 <br><br>
 				<label for="confirmpassword" class="col-sm-3 col-md-3 col-lg-3 control-label" style="text-align:right">Confirm Password</label>
 				   <div class="col-sm-3 col-md-3 col-lg-3">
-					   <input class="form-control" type="password" name="customer_pass1" value="<?php if(isset($_POST['customer_pass1']))echo htmlspecialchars($_POST['customer_pass1'])?>" autocomplete="off">
+					   <input class="form-control" type="password" data-toggle="tooltip" data-placement="right" title="Enter only alphanumeric values!" name="customer_pass1" value="<?php if(isset($_POST['customer_pass1']))echo htmlspecialchars($_POST['customer_pass1'])?>" autocomplete="off">
 				   </div>
                 <span class="error"><?php if (array_key_exists('$customer_pass1', $reg_errors))echo $reg_errors['$customer_pass1']?></span>
                 <br><br>
@@ -179,7 +179,7 @@ if(empty($reg_errors)){
                 <br><br>
 				<label for="pincode" class="col-sm-3 col-md-3 col-lg-3 control-label" id="pcode" style="text-align:right">Pin Code</label>
 				   <div class="col-sm-3 col-md-3 col-lg-3">
-					   <input class="form-control" type="text" id="pin" name="customer_pin" value="<?php if(isset($_POST['customer_pin']))echo htmlspecialchars($_POST['customer_pin'])?>" autocomplete="off">
+					   <input class="form-control" type="text" id="pin" data-toggle="tooltip" data-placement="top" title="Enter 6-digit pincode!" name="customer_pin" value="<?php if(isset($_POST['customer_pin']))echo htmlspecialchars($_POST['customer_pin'])?>" autocomplete="off">
 				   </div>
                 <span class="error"><?php if (array_key_exists('$customer_pin', $reg_errors))echo $reg_errors['$customer_pin']?></span>
                 <br><br>
