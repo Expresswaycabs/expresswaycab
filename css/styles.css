@@ -36,6 +36,9 @@
 	border-radius:50%;
 	border: 5px solid green;
 }
+#owner{
+	border: 2px onset orange;
+}
 .onlinefleetmanager{
     border: 3px solid orange;
 	background:#ffffcc;
