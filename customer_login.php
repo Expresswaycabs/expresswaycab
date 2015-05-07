@@ -69,7 +69,7 @@ if(empty($login_errors)){
 </form> 
 
 </div>
-</div><br>
+</div><br><br><br>
 <?php
 include('./includes/footer.html');
 ?>
