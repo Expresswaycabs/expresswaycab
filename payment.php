@@ -53,7 +53,7 @@ require(MYSQL);
 <h1 class="logo">PAYMENT GATEWAY</h1>
 </div>		
 <br>&nbsp;&nbsp;&nbsp;Enter your billing information:<br><br>
-<form action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>" method="POST">
+<form action="mail_handler.php" method="POST">
 <div class="container-fluid">
 
 
