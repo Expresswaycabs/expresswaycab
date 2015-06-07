@@ -1,5 +1,6 @@
 <?php
 require('./includes/config.inc.php');
+include('./includes/header2.html');
 require(MYSQL);
 ?>
 Enter your billing information:
