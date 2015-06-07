@@ -52,7 +52,7 @@ require(MYSQL);
 <div class="header">
 <h1 class="logo">PAYMENT GATEWAY</h1>
 </div>		
-<br>Enter your billing information:
+<br>&nbsp;&nbsp;Enter your billing information:
 <form action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>" method="POST">
 <div class="container-fluid">
 
@@ -65,7 +65,7 @@ Enter Your Credit Card No:
 <input type="text" name="cardno" placeholder="****-****-****">
 </div>
 <div class="col-sm-6 col-md-6 col-lg-6"></div>
-</div><br><br>
+</div><br>
 
 <div class="row">
 <div class="col-sm-3 col-md-3 col-lg-3">
@@ -80,7 +80,7 @@ CVV:
 <div class="col-sm-3 col-md-3 col-lg-3">
 <input type="text" name="cvv" size="3">
 </div>
-</div>
+</div><br>
 
 <div class="row">
 <div class="col-sm-3 col-md-3 col-lg-3">
@@ -90,7 +90,7 @@ Enter Your Phone No:
 <input type="text" name="phno" placeholder="Enter 10 digit phone no">
 </div>
 <div class="col-sm-6 col-md-6 col-lg-6></div>
-</div>
+</div><br>
 
 <div class="row">
 <div class="col-sm-3 col-md-3 col-lg-3">
@@ -100,7 +100,7 @@ Enter Your Email No:
 <input type="email" name="email" placeholder="xyz@abc.com">
 </div>
 <div class="col-sm-6 col-md-6 col-lg-6></div>
-</div>
+</div><br><br>
 
 <div class="row">
 <button type="submit" class="btn btn-success" id="logbtn">Confirm Payment</button>
