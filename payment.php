@@ -52,7 +52,7 @@ require(MYSQL);
 <div class="header">
 <h1 class="logo">PAYMENT GATEWAY</h1>
 </div>		
-<br>&nbsp;&nbsp;Enter your billing information:
+<br>&nbsp;&nbsp;&nbsp;Enter your billing information:<br><br>
 <form action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>" method="POST">
 <div class="container-fluid">
 
