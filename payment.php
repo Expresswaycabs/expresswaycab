@@ -89,8 +89,9 @@ Enter Your Phone No:
 <div class="col-sm-3 col-md-3 col-lg-3">
 <input type="text" name="phno" placeholder="Enter 10 digit phone no">
 </div>
-<div class="col-sm-6 col-md-6 col-lg-6></div>
+<div class="col-sm-6 col-md-6 col-lg-6"></div>
 </div><br>
+<br>
 
 <div class="row">
 <div class="col-sm-3 col-md-3 col-lg-3">
@@ -99,7 +100,7 @@ Enter Your Email No:
 <div class="col-sm-3 col-md-3 col-lg-3">
 <input type="email" name="email" placeholder="xyz@abc.com">
 </div>
-<div class="col-sm-6 col-md-6 col-lg-6></div>
+<div class="col-sm-6 col-md-6 col-lg-6"></div>
 </div><br><br>
 
 <div class="row">
