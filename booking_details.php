@@ -5,20 +5,20 @@ require(MYSQL);
 ?>
 <?php   
         $customer_eid = $_SESSION['customer_eid'];
-		$customer_id = $_SESSION['customer_id'];
+	$customer_id = $_SESSION['customer_id'];
         $returning = $_SESSION['returning'];
         $carpooling = $_SESSION['carpooling'];		
         $from_city = $_SESSION['from_city'];
         $to_city = $_SESSION['to_city'];
         $no_of_pass = $_SESSION['no_of_pass'];
         $date_arr = $_SESSION['date_arr'];
-		$time_arr = $_SESSION['time_arr'];
-		$date_ret = $_SESSION['date_ret'];
-		$time_ret = $_SESSION['time_ret'];
-		$route_id = $_SESSION['route_id'];
-		$retRoute_id = $_SESSION['retRoute_id'];
-		$status_no = $_SESSION['status_no'];
-		$car_no = $_SESSION['car_no'];
+	$time_arr = $_SESSION['time_arr'];
+	$date_ret = $_SESSION['date_ret'];
+	$time_ret = $_SESSION['time_ret'];
+	$route_id = $_SESSION['route_id'];
+	$retRoute_id = $_SESSION['retRoute_id'];
+	$status_no = $_SESSION['status_no'];
+	$car_no = $_SESSION['car_no'];
 $book_errors = array();
 if($_SERVER['REQUEST_METHOD']=='POST'){
 
@@ -52,38 +52,7 @@ if(empty($book_errors)){
       $booking_no = $row['booking_no'];	   
       $_SESSION['booking_no'] = $booking_no;		   
 	  
-       if($status_no==2)
-		{
-            $query = "INSERT INTO status_detail_2(route_id,status_no,car_no,booking_no) VALUES ('$route_id','$status_no','$car_no','$booking_no') ";
-			$result = mysqli_query($dbc,$query);
-			if($result==FALSE) {
-              die('Invalid query: ' . mysqli_error($dbc));
-           }
-		}	
-		else if($status_no==3)
-		{
-            $query = "INSERT INTO status_detail_3(route_id,status_no,car_no,booking_no,retRoute_id) VALUES ('$route_id','$status_no','$car_no','$booking_no','$retRoute_id')";
-			$result = mysqli_query($dbc,$query);
-			if($result==FALSE) {
-               die('Invalid query: ' . mysqli_error($dbc));
-           }
-		}	
-		else if($status_no==4){
-			
-		 	$query = "INSERT INTO status_detail_4(route_id,status_no,car_no,booking_no) VALUES ('$route_id','$status_no','$car_no','$booking_no') ";
-			$result = mysqli_query($dbc,$query);
-			if($result==FALSE) {
-           die('Invalid query: ' . mysqli_error($dbc));
-           }
-		}
-		else if($status_no==5){
-			
-			$query = "INSERT INTO status_detail_5(route_id,status_no,car_no,booking_no,retRoute_id) VALUES ('$route_id','$status_no','$car_no','$booking_no','$retRoute_id')";
-			$result = mysqli_query($dbc,$query);
-			if($result==FALSE) {
-               die('Invalid query: ' . mysqli_error($dbc));
-           }
-		}
+       
 		
 		header("Location:booking_summary.php");
 	  }
