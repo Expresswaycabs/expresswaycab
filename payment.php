@@ -52,7 +52,7 @@ require(MYSQL);
 Enter your billing information:
 <form action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>" method="POST">
 <div class="container-fluid">
-<div class="loginform" style="height:300px">
+
 
 <div class="row">
 <div class="col-sm-4 col-md-4 col-lg-4">
@@ -101,7 +101,7 @@ Enter Your Email No:
 <button type="submit" class="btn btn-success" id="logbtn">Confirm Payment</button>
 </div>
 
-</div>
+
 </div>
 </form> 
 </body>
