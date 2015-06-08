@@ -449,7 +449,7 @@ if(empty($reg_errors)){
   <option <?php if (isset($_POST['to_city']) && $to_city=="Hassan, Karnataka") echo "checked";?>value="Hassan, Karnataka">Hassan, Karnataka</option>
   <option <?php if (isset($_POST['to_city']) && $to_city=="Belur, Karnataka") echo "checked";?>value="Belur, Karnataka">Belur, Karnataka</option>
   <option <?php if (isset($_POST['to_city']) && $to_city=="Mysuru, Karnataka") echo "checked";?>value="Mysuru, Karnataka">Mysuru, Karnataka</option>
-</select>
+</select><option <?php if (isset($_POST['to_city']) && $to_city=="Tirupati, Andhra Pradesh") echo "checked";?>value="Tirupati, Andhra Pradesh">Tirupati, Andhra Pradesh</option>
 </div>
 
 </div>
